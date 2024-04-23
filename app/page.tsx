@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import { AnchorProvider, Program, web3 } from "@coral-xyz/anchor";
-import '/workspaces/sbc-workspace/order/app/my-app/app/idl.json';
 import { PublicKey } from "@metaplex-foundation/js";
 
 export default function Home() {
