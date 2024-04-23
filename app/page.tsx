@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 import { AnchorProvider, Program, web3 } from "@coral-xyz/anchor";
+import '/workspaces/sbc-workspace/order/app/my-app/app/idl.json';
 import { PublicKey } from "@metaplex-foundation/js";
-import order_IDL from '/workspaces/sbc-workspace/order/app/my-app/app/idl.json';
 
 export default function Home() {
   const [connectedWallet, setconnectedWallet] = useState<null | string>(null);
@@ -224,6 +224,138 @@ export default function Home() {
 }
 
 export type order = {
+  "address": "35WSnRPLrqKeZWcXmq65vfiJ4ns1CAAEtSiC91vYhApr",
+  "metadata": {
+    "name": "order",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "initialize",
+      "discriminator": [
+        175,
+        175,
+        109,
+        31,
+        13,
+        152,
+        155,
+        237
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "purchase",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "nam",
+          "type": "string"
+        },
+        {
+          "name": "contact",
+          "type": "string"
+        },
+        {
+          "name": "sizeb",
+          "type": "string"
+        },
+        {
+          "name": "quanb",
+          "type": "string"
+        },
+        {
+          "name": "sizew",
+          "type": "string"
+        },
+        {
+          "name": "quanw",
+          "type": "string"
+        },
+        {
+          "name": "quanl",
+          "type": "string"
+        },
+        {
+          "name": "quanp",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "purchase",
+      "discriminator": [
+        55,
+        82,
+        172,
+        133,
+        27,
+        115,
+        112,
+        27
+      ]
+    }
+  ],
+  "types": [
+    {
+      "name": "purchase",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "nam",
+            "type": "string"
+          },
+          {
+            "name": "contact",
+            "type": "string"
+          },
+          {
+            "name": "sizeb",
+            "type": "string"
+          },
+          {
+            "name": "quanb",
+            "type": "string"
+          },
+          {
+            "name": "sizew",
+            "type": "string"
+          },
+          {
+            "name": "quanw",
+            "type": "string"
+          },
+          {
+            "name": "quanl",
+            "type": "string"
+          },
+          {
+            "name": "quanp",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ]
+};
+
+export const order_IDL :  order = {
   "address": "35WSnRPLrqKeZWcXmq65vfiJ4ns1CAAEtSiC91vYhApr",
   "metadata": {
     "name": "order",
