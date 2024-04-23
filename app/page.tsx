@@ -2,7 +2,8 @@
 import { useState } from "react";
 import { AnchorProvider, Program, web3 } from "@coral-xyz/anchor";
 import { PublicKey } from "@metaplex-foundation/js";
-import order_IDL from '../app/idl.json'
+
+const order_IDL = require('../app/idl.json');
 
 export default function Home() {
   const [connectedWallet, setconnectedWallet] = useState<null | string>(null);
